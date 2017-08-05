@@ -1,0 +1,20 @@
+{
+  "name": "manikumar",
+  "homepage": "https://github.com/ManikumarGudivada/GMKRepository",
+  "authors": [
+    "Manikumar <manikumargudivada@gmail.com>"
+  ],
+  "description": "For practice",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies":{
+    "angular":"Latest"
+  }
+}
