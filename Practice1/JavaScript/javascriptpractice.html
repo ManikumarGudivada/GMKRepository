@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<!--Calling the functions-->
+<label>MYBUTTON</label>&emsp;&emsp;
+<input type="button" onclick="funtocallinnerfnc2()" ondblclick="myNamed_func()" />
+<br>
+<!--Calling the class data and methods-->
+<label>PullClassDetails</label>
+<input type="button" onclick="my_fnc().my_Class()" ondblclick="my_fnc().myclassfunc()"/>
+<br>
+<h1>Below message is displayed from class variable</h1>
+<h1 id="myid"></h1>
+<br>
+<!--Calling the class data and methods-->
+<label>PullClassDetails2</label>
+<input id="mybutton" type="button" onclick="my_fnc().myclassfunc()"/>
+<script>
+    <!--Function practice-->
+    function myfunc(){
+        console.log("This is console log");
+        Alert ("This is alert message");
+    };
+
+    var myNamed_func= function(){
+        console.log("This is my NAMED function");
+    };
+
+    function funtocallinnerfnc() {
+        return function () {
+            console.log("This is an inner function message");
+        };
+    };
+    function funtocallinnerfnc2(){
+        return innerfnc();
+    };
+    function innerfnc(){
+        console.log("This function is created outside and returned from other function")
+    }
+</script>
+
+<SCRIPT>
+    <!--Class definition practice-->
+    function my_Class(){
+        this.var1="variable1";
+        this.my_Class=function () {
+            console.log("This is from the constructor.");
+        };
+        this.myclassfunc=function(){
+            console.log("classfunction");
+        }
+
+    };
+    function my_fnc(){
+        return new my_Class();
+    }
+    var obj=new my_Class();
+    document.getElementById("myid").innerHTML=obj.var1;
+
+</SCRIPT>
+
+</html>

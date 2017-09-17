@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="ctrl">
+<div ng-model="var_one"></div>
+<div ng-bind="var_one"></div>
+{{var_one}}
+<table border="1">
+    <tr>
+        <th>Product ID</th>
+        <th>Product Name</th>
+        <th>Product Cost</th>
+    </tr>
+    <tr ng-repeat="x in array">
+        <td>{{x.pid}}</td>
+        <td>{{x.pname}}</td>
+        <td>{{x.pcost}}</td>
+    </tr>
+</table>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+<script>
+    var app=angular.module("app",[]);
+    app.controller("ctrl",ctrl);
+    function ctrl($Scope) {
+        $Scope.var_one="Data";
+        $Scope.array=[{'pid':111,'pname':'Laptop','pcost':30000},
+                      {'pid':222,'pname':'Mobile','pcost':20000}
+                      ];
+    }
+</script>
+</html>

@@ -1,0 +1,35 @@
+<!--<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="ctrl">
+{{fnc()}}
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+<script>
+    var app=angular.module("app",[]);
+    app.controller("ctrl",ctrl);
+    function ctrl($scope){
+        $scope.var_one="mydata";
+        $scope.fnc=function(){
+            return  $scope.var_one;
+        }
+    }
+</script>
+</html>-->
+
+<!--Controller under another controller-->
+<!DOCTYPE html>
+<html ng-app="app">
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+<script>
+    var app=angular.module("app",[]);
+    app.controller("parentctrl",parentctrl);
+    function parentctrl($scope){
+        $scope.parent="I am From Parent Controller";
+    };
+    app.controller("childctrl"childctrl);
+    function childctrl($scope){
+        $scope.child="I am from Child COntroller";
+    };
+
+</script>
+</html>

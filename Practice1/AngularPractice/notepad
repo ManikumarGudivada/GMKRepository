@@ -1,0 +1,12 @@
+<table border="1">
+    <tr>
+        <th>Product ID</th>
+        <th>Product Name</th>
+        <th>Product Cost</th>
+    </tr>
+    <tr ng-repeat="x in array">
+        <td>{{x.pid}}</td>
+        <td>{{x.pname}}</td>
+        <td>{{x.pcost}}</td>
+    </tr>
+</table>

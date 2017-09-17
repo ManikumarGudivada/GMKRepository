@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<script>
+    var data={
+        "products":[
+            {'pid':111,'pname':'laptop','pcost':50000},
+            {'pid':222,'pname':'mobile','pcost':10000},
+            {'pid':333,'pname':'watch','pcost':5000}
+        ]
+    };
+    var result="";
+    for(var i=0;i<data.products.length;i++){
+        var pid=data.products[i].pid;
+        document.write("<h1>"+pid+"</h1><br>");
+    };
+
+    var arr=[];
+
+    for(var i=0;i<5;i++){
+        arr.push(i);
+    }
+    document.write(arr.length+"<br>");
+    for (var i=0;i<5;i++){
+        document.write(arr[i]+"&emsp;");
+    }
+</script>
+</html>
